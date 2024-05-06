@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS Connections(
+    id SERIAL PRIMARY KEY,
+    reciepant_id INTEGER REFERENCES Users(id)
+    ON DELETE CASCADE,
+    sender_id INTEGER REFERENCES Users(id)
+    ON DELETE CASCADE
+)

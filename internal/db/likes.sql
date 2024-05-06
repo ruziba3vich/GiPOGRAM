@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS Likes(
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES Users(id)
+    post_id INTEGER REFERENCES Posts(id)
+)
